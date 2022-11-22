@@ -47,5 +47,73 @@ public class Helpers {
         }
     }
 
+    public static int[] ReverseArray(int[] array) {
+
+            int[] reverseArray = new int[array.length];
+
+            for(int i = 0; i < array.length; i++){
+
+                reverseArray[i] = array[array.length - 1 - i];
+            }
+            return reverseArray;
+    }
+
+
+    public static int[] SortArray(int[] array) {
+
+            for (int j = 0; ; ) {
+                int temp = 0;
+                int count = 0;                  //для остановки массива
+
+                for (int i = 0; i < array.length - 1; i++) {
+                    if (array[i] > array[i + 1]) {
+                        temp = array[i];
+                        array[i] = array[i + 1];
+                        array[i + 1] = temp;
+                        count++;
+                    }
+                }
+                if (count == 0) {
+                    break;
+                }
+            }
+            return array;
+    }
+
+    public int[] evenArray(int[] arr){
+
+        int[] resultArray = new int[arr.length];
+
+        int resultArrIndex = 0;
+
+        for(int i = 0; i < arr.length; i++){
+            if(i % 2 == 0){
+                resultArray[resultArrIndex] = i;
+                resultArrIndex++;
+            }
+        }
+        return resultArray;
+    }
+
+    public int[] oddArray(int[] arr){
+
+        int[] resultArray = new int[arr.length];
+
+        int resultArrIndex = 0;
+
+        for(int i = 0; i < arr.length; i++){
+            if(i % 2 != 0){
+                resultArray[resultArrIndex] = i;
+                resultArrIndex++;
+            }
+        }
+        return resultArray;
+    }
+
+
+
 }
+
+
+
 

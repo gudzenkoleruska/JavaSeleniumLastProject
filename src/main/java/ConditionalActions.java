@@ -7,10 +7,10 @@ public class ConditionalActions {
 //    If M doesn't satisfy any of the above conditions then return "-1"
 
 
-    public String ConditionalActions(int m){
+    public String ConditionalActionsAll(int m){
         if((m % 7 == 0) && (m % 9 == 0)){
             return "Good Number";
-        }else if((m % 9 == 0) && (m % 7 != 0)){
+        }else if(m % 9 == 0){
             return "Bad Number";
         }else if(m % 11 == 0){
             return "Poor Number";
