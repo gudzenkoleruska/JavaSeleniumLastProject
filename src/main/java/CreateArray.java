@@ -69,6 +69,5 @@ public class CreateArray {
         return new int[0];
     }
 
-//
 
 }

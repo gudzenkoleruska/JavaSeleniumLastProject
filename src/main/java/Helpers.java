@@ -42,9 +42,20 @@ public class Helpers {
     public static boolean isItArray(int[] array) {
         if (array != null && array.length > 0) {
             return true;
-        } else {
-            return false;
         }
+        return false;
+    }
+
+
+
+
+    public static boolean isValidString(String str) {
+        if (str != null) {
+            if (!str.trim().isEmpty()) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public static int[] ReverseArray(int[] array) {
@@ -80,7 +91,7 @@ public class Helpers {
             return array;
     }
 
-    public int[] evenArray(int[] arr){
+    public static int[] evenArray(int[] arr){
 
         int[] resultArray = new int[arr.length];
 
@@ -95,7 +106,7 @@ public class Helpers {
         return resultArray;
     }
 
-    public int[] oddArray(int[] arr){
+    public static int[] oddArray(int[] arr){
 
         int[] resultArray = new int[arr.length];
 
@@ -109,6 +120,7 @@ public class Helpers {
         }
         return resultArray;
     }
+
 
 
 
